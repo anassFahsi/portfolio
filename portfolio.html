@@ -1,0 +1,207 @@
+<!DOCTYPE html>
+<html lang="sv">
+<head>
+    <meta charset="UTF-8">
+    <title>Anass – Portfolio</title>
+    <style>
+        :root {
+            --bg: #f7f9fc;
+            --text: #2c3e50;
+            --accent: #4a6fa1;
+            --card-bg: #ffffff;
+            --radius: 14px;
+            --shadow: 0 4px 14px rgba(0,0,0,0.08);
+        }
+
+        body {
+            margin: 0;
+            font-family: 'Segoe UI', Arial, sans-serif;
+            background: var(--bg);
+            color: var(--text);
+        }
+
+        /* HERO */
+        header {
+            text-align: center;
+            padding: 60px 20px;
+            background: linear-gradient(135deg, #2c3e50, #4a6fa1);
+            color: white;
+        }
+
+        header img {
+            width: 150px;
+            height: 150px;
+            border-radius: 50%;
+            object-fit: cover;
+            border: 4px solid #fff;
+            margin-bottom: 20px;
+        }
+
+        header h1 {
+            font-size: 42px;
+            margin: 10px 0;
+        }
+
+        header p {
+            font-size: 20px;
+            opacity: 0.95;
+            margin: 5px 0;
+        }
+
+        /* CONTAINER */
+        .container {
+            width: 90%;
+            max-width: 1100px;
+            margin: 50px auto;
+        }
+
+        h2 {
+            font-size: 28px;
+            margin-bottom: 20px;
+            border-left: 6px solid var(--accent);
+            padding-left: 12px;
+        }
+
+        /* SECTIONS */
+        .section {
+            background: var(--card-bg);
+            padding: 30px;
+            border-radius: var(--radius);
+            box-shadow: var(--shadow);
+            margin-bottom: 40px;
+        }
+
+        /* PROJECT GRID */
+        .projects-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+            gap: 25px;
+        }
+
+        .project {
+            background: #fafafa;
+            padding: 20px;
+            border-radius: var(--radius);
+            border-left: 5px solid var(--accent);
+            transition: transform 0.2s ease, box-shadow 0.2s ease;
+        }
+
+        .project:hover {
+            transform: translateY(-5px);
+            box-shadow: 0 6px 18px rgba(0,0,0,0.12);
+        }
+
+        .project h3 {
+            margin-top: 0;
+            font-size: 22px;
+        }
+
+        .project a {
+            color: var(--accent);
+            font-weight: bold;
+            text-decoration: none;
+        }
+
+        .project a:hover {
+            text-decoration: underline;
+        }
+
+        /* CONTACT */
+        .contact p {
+            font-size: 18px;
+            margin: 8px 0;
+        }
+
+        .contact a {
+            color: var(--accent);
+            font-weight: bold;
+            text-decoration: none;
+        }
+
+        .contact a:hover {
+            text-decoration: underline;
+        }
+
+        /* FOOTER */
+        footer {
+            text-align: center;
+            padding: 25px;
+            background: #2c3e50;
+            color: white;
+            margin-top: 40px;
+        }
+    </style>
+</head>
+
+<body>
+
+    <!-- HERO -->
+    <header>
+        <img src="bild.jpg" alt="Anass">
+        <h1>Anass Fahsi</h1>
+        <p>Fullstack Developer Student – Medieinstitutet</p>
+        <p>Stockholm, Sverige</p>
+    </header>
+
+    <div class="container">
+
+        <!-- OM MIG -->
+        <div class="section">
+            <h2>Om mig</h2>
+            <p>
+                Jag är en fullstack‑utvecklare som brinner för att bygga moderna webbapplikationer med fokus på struktur,
+                säkerhet och användarupplevelse. Jag arbetar gärna med backend, fullstack, API‑utveckling och databaser.
+                Jag gillar att lösa problem, bygga smarta lösningar och utvecklas i team.
+            </p>
+        </div>
+
+        <!-- PROJEKT -->
+        <div class="section">
+            <h2>Projekt</h2>
+
+            <div class="projects-grid">
+
+                <div class="project">
+                    <h3>Community Forum – PHP, SQL, Tailwind</h3>
+                    <p>
+                        Ett forum där användare kan registrera sig, gå med i grupper, ansöka om medlemskap, starta
+                        diskussioner och svara på inlägg. Fokus på säker databehandling och databasstruktur.
+                    </p>
+                    <p>
+                        🔗 <a href="https://github.com/anassFahsi/community-forum" target="_blank">GitHub</a><br>
+                        🔗 <a href="https://community-forum-sigma.vercel.app" target="_blank">Demo</a>
+                    </p>
+                </div>
+
+                <div class="project">
+                    <h3>E‑handel – React & Node.js</h3>
+                    <p>
+                        En modern e‑handelsapplikation med produktlistning, kundvagn, checkout‑flöde och API‑kommunikation.
+                        Byggd med React (frontend) och Node.js/Express (backend).
+                    </p>
+                    <p>
+                        🔗 <a href="https://github.com/Medieinstitutet/fsu25d-systemutveckling-uppgift-1-min-egna-e-handel-anassFahsi" target="_blank">GitHub</a><br>
+                        🔗 <a href="https://fashionhub-live.vercel.app" target="_blank">Demo</a>
+                    </p>
+                </div>
+
+            </div>
+        </div>
+
+        <!-- KONTAKT -->
+        <div class="section contact">
+            <h2>Kontakt</h2>
+            <p>📧 anass-fahsi@hotmail.com</p>
+            <p>📱 076‑4019190</p>
+            <p>🔗 <a href="https://github.com/anassFahsi" target="_blank">GitHub</a></p>
+            <p>🔗 <a href="https://www.linkedin.com/in/anass-fahsi-680b4240b" target="_blank">LinkedIn</a></p>
+        </div>
+
+    </div>
+
+    <footer>
+        © 2026 Anass Fahsi — Fullstack Developer
+    </footer>
+
+</body>
+</html>
