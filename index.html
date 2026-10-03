@@ -2,7 +2,9 @@
 <html lang="sv">
 <head>
     <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Anass – Portfolio</title>
+
     <style>
         :root {
             --bg: #f7f9fc;
@@ -84,7 +86,9 @@
             border-radius: var(--radius);
             border-left: 5px solid var(--accent);
             transition: transform 0.2s ease, box-shadow 0.2s ease;
-    
+            display: flex;
+            flex-direction: column;
+            justify-content: space-between;
         }
 
         .project:hover {
@@ -105,6 +109,13 @@
 
         .project a:hover {
             text-decoration: underline;
+        }
+
+        .project-links {
+            margin-top: auto;
+            display: flex;
+            gap: 12px;
+            align-items: center;
         }
 
         /* CONTACT */
@@ -130,6 +141,46 @@
             background: #2c3e50;
             color: white;
             margin-top: 40px;
+        }
+
+        /* ============================
+           MOBILANPASSNING
+           ============================ */
+        @media (max-width: 600px) {
+
+            header {
+                padding: 40px 15px;
+            }
+
+            header img {
+                width: 110px;
+                height: 110px;
+            }
+
+            header h1 {
+                font-size: 28px;
+            }
+
+            header p {
+                font-size: 16px;
+            }
+
+            .container {
+                width: 94%;
+                margin: 30px auto;
+            }
+
+            .projects-grid {
+                grid-template-columns: 1fr;
+            }
+
+            .project {
+                padding: 18px;
+            }
+
+            .project-links {
+                gap: 10px;
+            }
         }
     </style>
 </head>
@@ -168,8 +219,8 @@
                         Ett forum där användare kan registrera sig, gå med i grupper, ansöka om medlemskap, starta
                         diskussioner och svara på inlägg. Fokus på säker databehandling och databasstruktur.
                     </p>
-                    <p>
-                        🔗 <a href="https://github.com/anassFahsi/community-forum" target="_blank">GitHub</a><br>
+                    <p class="project-links">
+                        🔗 <a href="https://github.com/anassFahsi/community-forum" target="_blank">GitHub</a>
                         🔗 <a href="https://community-forum-sigma.vercel.app" target="_blank">Demo</a>
                     </p>
                 </div>
@@ -180,25 +231,24 @@
                         En modern e‑handelsapplikation med produktlistning, kundvagn, checkout‑flöde och API‑kommunikation.
                         Byggd med React (frontend) och Node.js/Express (backend).
                     </p>
-                    <p>
-                        🔗 <a href="https://github.com/anassFahsi/E-handel" target="_blank">GitHub</a><br>
+                    <p class="project-links">
+                        🔗 <a href="https://github.com/anassFahsi/E-handel" target="_blank">GitHub</a>
                         🔗 <a href="https://fashionhub-live.vercel.app" target="_blank">Demo</a>
                     </p>
                 </div>
 
                 <div class="project">
-            <h3>Recept‑tjänst – React, TypeScript, PostgreSQL</h3>
-            <p>
-                En gruppuppgift där vi byggde en fullständig recepttjänst med inloggning, 
-                receptlista, ingredienshantering, nivåer och administrativ vy. Appen byggdes 
-                i React,TypeScript och PostgreSQL.
-            </p>
-            <p class="github">
-                🔗 <a href="https://github.com/anassFahsi/Recept-tjanst" target="_blank">GitHub</a><br>
-                🔗 <a href="https://recept-tjanst-frontend.vercel.app" target="_blank">Demo</a>
-            </p>
-        </div>
-
+                    <h3>Recept‑tjänst – React, TypeScript, PostgreSQL</h3>
+                    <p>
+                        En gruppuppgift där vi byggde en fullständig recepttjänst med inloggning, 
+                        receptlista, ingredienshantering, nivåer och administrativ vy. Appen byggdes 
+                        i React, TypeScript och PostgreSQL.
+                    </p>
+                    <p class="project-links">
+                        🔗 <a href="https://github.com/anassFahsi/Recept-tjanst" target="_blank">GitHub</a>
+                        🔗 <a href="https://recept-tjanst-frontend.vercel.app" target="_blank">Demo</a>
+                    </p>
+                </div>
 
             </div>
         </div>
@@ -207,16 +257,4 @@
         <div class="section contact">
             <h2>Kontakt</h2>
             <p>📧 anass-fahsi@hotmail.com</p>
-            <p>📱 076‑4019190</p>
-            <p>🔗 <a href="https://github.com/anassFahsi" target="_blank">GitHub</a></p>
-            <p>🔗 <a href="https://www.linkedin.com/in/anass-fahsi-680b4240b" target="_blank">LinkedIn</a></p>
-        </div>
-
-    </div>
-
-    <footer>
-        © 2026 Anass Fahsi — Fullstack Developer
-    </footer>
-
-</body>
-</html>
+            <p>
